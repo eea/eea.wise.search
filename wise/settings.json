@@ -10,9 +10,8 @@
     },
     "external_templates": {
         "local_path": "/external_templates",
-        "protocol": "http",
-        "host": "plone",
-        "port": "8080",
+        "protocol": "https",
+        "host": "wise-test.eionet.europa.eu",
         "head_path": "/Plone/marine/external-template-head",
         "header_path": "/Plone/marine/external-template-header",
         "footer_path": "/Plone/marine/external-template-footer",
