@@ -26,7 +26,6 @@
         "override_searchserver_resources": true,
         "css_resources": {
             "index_page": [
-                "css/critical.css",
                 "css/no-more-tables.css",
                 "css/esbootstrap.facetview.css",
                 "css/wise.facetview.css"
