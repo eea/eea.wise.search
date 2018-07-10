@@ -1,0 +1,103 @@
+{
+    "http": {
+        "port": 3000
+    },
+    "elastic": {
+        "index": "esbootstrapdata-wise",
+        "type": "resource",
+        "field_base":"",
+        "enableValuesCounting": true
+    },
+    "external_templates": {
+        "local_path": "/external_templates",
+        "protocol": "http",
+        "host": "plone",
+        "port": "8080",
+        "head_path": "/Plone/marine/external-template-head",
+        "header_path": "/Plone/marine/external-template-header",
+        "footer_path": "/Plone/marine/external-template-footer",
+        "strip_templates": true
+    },
+    "layout_vars": {
+        "head_title": "Wise Marine",
+        "app_id": "pam",
+        "skip_external_template_styles": true,
+        "skip_resources_bundling": false,
+        "override_searchserver_resources": true,
+        "css_resources": {
+            "index_page": [
+                "css/no-more-tables.css",
+                "css/esbootstrap.facetview.css",
+                "css/wise.facetview.css"
+            ],
+            "details_page": [
+                "css/esbootstrap.facetview.css"
+            ],
+            "layout_page": [
+                "facetview/vendor/jquery-ui-1.11.4.custom/jquery-ui.css",
+
+                "facetview/vendor/dist/themes/default/style.min.css",
+                "facetview/css/style.css",
+                "facetview/css/facetview.css",
+                "css/style.css",
+                "css/tiles.css"
+            ]
+        },
+        "js_resources": {
+            "index_page": [
+
+            ],
+            "details_page": [],
+            "layout_page": [
+                "facetview/vendor/dist/libs/jquery.min.js",
+
+                "facetview/vendor/dist/libs/jquery.migrate.3.0.0.min.js",
+                "facetview/vendor/jquery-ui.1.12.1/jquery-ui.min.js",
+
+                "facetview/vendor/bootstrap4/js/bootstrap.4.1.1.min.js",
+                "facetview/vendor/jquery-lazy/jquery.lazy.min.js",
+                "facetview/vendor/dist/jstree.js",
+                "facetview/vendor/linkify/1.0/jquery.linkify-1.0-min.js",
+
+                "facetview/vendor/touchpunch/jquery.ui.touch-punch.min.js",
+                "facetview/vendor/d3/d3.v4.min.js",
+                "facetview/jquery.facetview.js",
+                "facetview/facetviewhelpers.js",
+                "facetview/landing.js",
+                "facetview/jquery.autocompletewithhighlight.js",
+                "facetview/jquery.autocompleteforfacet.js",
+
+                "javascripts/esbootstrap.facetview.js",
+
+                "javascripts/wise.facetview.js",
+                "javascripts/main.js"
+
+            ],
+            "_" : [
+
+            ]
+        },
+        "site_title": "Wise Marine search",
+        "site_description": "",
+        "enableBreadcrumbs": true,
+        "breadcrumbs": [{"Home":"https://water.europa.eu/marine/"}, {"Wise Marine search": ""}],
+        "dataprovencance_info_text": "Wise Marine search",
+        "dataprovencance_info_url": "wise marine dev",
+        "further_info": ""
+    },
+    "es_debug_enabled": false,
+    "suggestions_enabled": true,
+    "relevance_enabled": true,
+    "river_configs": {
+        "configs": [
+            {
+                "id": "wise",
+                "cluster_name": "wise",
+                "config_file": "riverconfig_wise.json"
+            }
+        ]
+    },
+
+    "endpoint": "http://semantic.eea.europa.eu/sparql",
+    "selected_navigation_tab": "data-and-maps"
+}

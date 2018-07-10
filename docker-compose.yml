@@ -1,0 +1,46 @@
+version: "2"
+
+services:
+
+  esmaster:
+    image: eeacms/elastic:1.7.5-1.6
+    restart: always
+    command:
+      - elasticsearch
+      - -Des.cluster.name="climateadapt"
+    labels:
+      io.rancher.scheduler.affinity:host_label_ne: reserved=yes
+      io.rancher.scheduler.affinity:host_label: cca=yes
+
+  app:
+    image: eeacms/esbootstrap:latest
+    volumes:
+      - cca-search-code:/code/config
+    environment:
+      - elastic_host=esmaster
+      - APP_CONFIG_DIRNAME=wise
+      - NODE_ENV=dev  # Change to production if you want to test the app in production environment
+    entrypoint:
+      - /node_modules/.bin/nodemon
+      - /code/app.js
+      - --watch
+      - /code/config/*/settings.json
+    command:
+      - runserver
+    labels:
+      io.rancher.scheduler.affinity:host_label_ne: reserved=yes
+      io.rancher.scheduler.affinity:host_label: cca=yes
+      io.rancher.sidekicks: esbootstrap-data-config
+
+  esbootstrap-data-config:
+    image: eeacms/climateadapt-search:master
+    volumes:
+      - cca-search-code:/code/config
+    environment:
+      - DEV_ENV=true
+    labels:
+      io.rancher.scheduler.affinity:host_label_ne: reserved=yes
+      io.rancher.scheduler.affinity:host_label: cca=yes
+
+volumes:
+  cca-search-code:
