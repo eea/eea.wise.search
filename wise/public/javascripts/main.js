@@ -33,6 +33,19 @@ window.jQuery(document).ready(function($){
                 $(".lazyLoad").Lazy();
         });
     }
+
+    $.ajax({
+        url: window.location.origin + "/marine",
+        method: "GET",
+        xhrFields: {
+          withCredentials: true
+       },
+        success: function ( data,  textStatus, jqXHR) {
+            $(".login-container").prepend( $(data).find(".login-container > a") );
+            $(".login-container > ul").replaceWith( $(data).find(".login-container > ul") );
+
+        }
+    });
     
 });
 

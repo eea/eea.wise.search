@@ -1,4 +1,8 @@
 /* remove draft watermark */
 #content {
   background: white;
-} 
+}
+
+.pam #eea-above-columns {
+  margin-top: 0;
+}
