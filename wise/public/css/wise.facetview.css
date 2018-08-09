@@ -37,7 +37,9 @@
 
 .pam #portal-searchbox .LSTable .LSRow {
     display: block;
+       max-width: 90%;
     white-space: normal;
+    margin-left: 5%;
 }
 
 .pam #portal-searchbox .LSTable .LSRow a {
