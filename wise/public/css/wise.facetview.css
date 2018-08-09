@@ -13,6 +13,12 @@
 
 .pam #portal-searchbox {
     margin-top: 0;
+    max-width: 270px;
+}
+
+.pam #portal-searchbox .LSResult {
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .pam #portal-searchbox form input {
