@@ -34,6 +34,14 @@ window.jQuery(document).ready(function($){
         });
     }
 
+    $("#portal-searchbox form").attr("action", "/Plone/marine/@@search");
+
+    $("#facetview_selected_filters").on("mouseenter",".facetview_selection", function (ev) {
+        $(ev.target).find(".eea-icon-times").removeClass("hidden");
+    }).on("mouseleave",".facetview_selection", function (ev) {
+        $(ev.target).find(".eea-icon-times").addClass("hidden");
+    });
+
     $.ajax({
         url: window.location.origin + "/marine",
         method: "GET",
@@ -43,6 +51,7 @@ window.jQuery(document).ready(function($){
         success: function ( data,  textStatus, jqXHR) {
             $(".login-container").prepend( $(data).find(".login-container > a") );
             $(".login-container > ul").replaceWith( $(data).find(".login-container > ul") );
+            $("body").append($(data).find(".footer"));
 
         }
     });

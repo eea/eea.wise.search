@@ -6,3 +6,43 @@
 .pam #eea-above-columns {
   margin-top: 0;
 }
+
+.facetview_filterselected .eea-icon {
+    margin-top: -2px;
+}
+
+.pam #portal-searchbox {
+    margin-top: 0;
+}
+
+.pam #portal-searchbox form input {
+    width: 93%;
+    border: 2px solid #29a2d9;
+    color: black;
+}
+
+.pam #portal-searchbox form input:focus {
+    background-color: #ffffe0;
+}
+
+.pam #portal-searchbox form .searchButton {
+    background-color: rgb(221, 221, 221);
+}
+
+.pam #portal-searchbox .LSTable .LSRow {
+    display: block;
+    white-space: normal;
+}
+
+.pam #portal-searchbox .LSTable .LSRow a {
+    color: #337ab7;
+}
+
+.pam #portal-searchbox .LSTable .LSRow a:before {
+    left: -1.7rem;
+    top: 1px;
+}
+
+.pam #portal-searchbox .LSTable .LSDescr {
+    white-space: normal;
+}
