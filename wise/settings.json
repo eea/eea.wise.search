@@ -10,12 +10,11 @@
     },
     "external_templates": {
         "local_path": "/external_templates",
-        "protocol": "http",
-        "host": "varnish",
-        "port":6081,
-        "head_path": "/VirtualHostBase/https/wise-test.eionet.europa.eu:443/Plone/VirtualHostRoot/Plone/marine/external-template-head",
-        "header_path": "/VirtualHostBase/https/wise-test.eionet.europa.eu:443/Plone/VirtualHostRoot//Plone/marine/external-template-header",
-        "footer_path": "/VirtualHostBase/https/wise-test.eionet.europa.eu:443/Plone/VirtualHostRoot//Plone/marine/external-template-footer",
+        "protocol": "https",
+        "host": "wise-test.eionet.europa.eu",
+        "head_path": "/Plone/marine/external-template-head",
+        "header_path": "/Plone/marine/external-template-header",
+        "footer_path": "/Plone/marine/external-template-footer",
         "strip_templates": true
     },
     "layout_vars": {
