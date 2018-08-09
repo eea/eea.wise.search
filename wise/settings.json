@@ -10,7 +10,7 @@
     },
     "external_templates": {
         "local_path": "/external_templates",
-        "protocol": "http",
+        "protocol": "https",
         "host": "plone",        
         "head_path": "/Plone/marine/external-template-head",
         "header_path": "/Plone/marine/external-template-header",
