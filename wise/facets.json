@@ -83,7 +83,7 @@
                     "rule": "startsWith",
                     "operator": "",
                     "field": "about",
-                    "value": "https://climate-adapt.eea.europa.eu",
+                    "value": "https://water.europa.eu",
                     "thumb_template": {
                         "template": "https://www.eea.europa.eu/themes/air/multimedia/multimedia/image_preview",
                         "variables": [{
