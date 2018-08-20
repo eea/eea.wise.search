@@ -197,7 +197,7 @@
             "name": "type_of_data",
             "listing": {
                 "title": "Type of Data",
-                "visible" : true
+                "visible" : false
             },
             "csv_tsv": {
                 "title": "Type of Data",
@@ -230,32 +230,7 @@
                 "visible": true
             }
         },
-        {
-            "name": "sectors",
-            "listing": {
-                "title": "Adaptation Sectors",
-                "visible": true
-            },
-            "facet": {
-                "facet_display_options": ["sort", "checkbox"],
-                "size": 50,
-                "min_size": 10,
-                "title": "Adaptation Sectors",
-                "order": "term",
-                "operator": "OR",
-                "visible": true
-            },
-            "card": {
-                "field": "sectors",
-                "default": "",
-                "visible": false
-            },
-            "list": {
-                "field": "sectors",
-                "default": "",
-                "visible": true
-            }
-        },
+
         {
             "name": "climate_impacts",
             "listing": {
@@ -264,7 +239,7 @@
             },
             "facet": {
                 "autocomplete": false,
-                "visible": true,
+                "visible": false,
                 "title": "Climate Impacts",
                 "size": 200,
                 "min_size": 10,
@@ -273,22 +248,7 @@
                 "facet_display_options": ["sort", "checkbox"]
             }
         },
-        {
-            "name": "elements",
-            "listing": {
-                "title": "Adaptation Elements",
-                "visible": true
-            },
-            "facet": {
-                "facet_display_options": ["sort", "checkbox"],
-                "size": 100,
-                "min_size": 10,
-                "title": "Adaptation Elements",
-                "order": "term",
-                "operator": "OR",
-                "visible": true
-            }
-        },
+
         {
             "name": "places",
             "values_whitelist":[
@@ -343,7 +303,7 @@
                 "visible": false
             },
             "facet": {
-                "visible": true,
+                "visible": false,
                 "title": "Countries",
                 "size": 500,
                 "min_size": 10,
@@ -364,7 +324,7 @@
                 "visible": true
             },
             "facet": {
-                "visible": true,
+                "visible": false,
                 "title": "Year",
                 "type": "rangehistogram",
                 "histogram_config": {
