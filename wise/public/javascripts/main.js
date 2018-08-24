@@ -34,8 +34,6 @@ window.jQuery(document).ready(function($){
         });
     }
 
-    $("#portal-searchbox form").attr("action", "/Plone/marine/@@search");
-
     $("#facetview_selected_filters").on("mouseenter",".facetview_selection", function (ev) {
         $(ev.target).find(".eea-icon-times").removeClass("hidden");
     }).on("mouseleave",".facetview_selection", function (ev) {

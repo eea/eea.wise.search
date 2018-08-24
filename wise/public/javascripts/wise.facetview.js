@@ -19,6 +19,11 @@ window.esbootstrap_options = {
     display_type: 'card',
     resultModifier: updateResult
 };
+
+if($.getUrlVars({}).SearchableText !== undefined){
+    window.esbootstrap_options.q = $.getUrlVars({}).SearchableText;
+}
+
 function updateContentTypes(element, result){
     result.contentType = 'generic';
     var contentTypes = {};
